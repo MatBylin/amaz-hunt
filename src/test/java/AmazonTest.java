@@ -20,7 +20,7 @@ public class AmazonTest extends Base {
 
             log.info("Watch: {} | Price: {} zł", watchName, amazonPrice);
 
-            if (amazonPrice < 800) {
+            if (amazonPrice < 800 && amazonPrice > 0) {
                 SmsService.sendSms(amazonPrice, watchName);
             } else {
                 log.info("Sms not sended");
