@@ -18,7 +18,7 @@ public class Base {
                     .userAgent(USER_AGENT)
                     .header(ACCEPT_LANGUAGE, LANGUAGE)
                     .get();
-
+            System.out.println(document.text());
             Elements elements = document.select(PRICE_LOCATOR);
             if (elements.isEmpty()) {
                 return -100;
