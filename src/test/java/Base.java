@@ -17,6 +17,7 @@ public class Base {
             Document document = Jsoup.connect(url)
                     .userAgent(USER_AGENT)
                     .header(ACCEPT_LANGUAGE, LANGUAGE)
+                    .header(ACCEPT, ACCEPT_HEADER)
                     .get();
             System.out.println(document.text());
             Elements elements = document.select(PRICE_LOCATOR);
